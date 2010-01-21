@@ -2,15 +2,17 @@
 
 ## Installation
 
-** NOTE: You must install ultraviolet *before* installing this plugin. Follow the instructions below.
+**NOTE:** You must install ultraviolet *before* installing this plugin. Follow the instructions below.
 
 This plugin allows you to add TextMate themed syntax highlighting to your views.
 
-It requires the Ultraviolet gem, which requires TextPow, which requires oniguruma (both the gem and the system library).
+It requires the `Ultraviolet` gem, which requires `TextPow`, which requires `oniguruma` (both the gem and the system library).
 
-Oniguruma is a regular expression library used by TextPow in order to properly parse TextMate syntax/language files.
+`Oniguruma` is a regular expression library used by `TextPow` in order to properly parse TextMate syntax/language files.
+
 It's relatively easy to install, here is the URL for the library:
-  http://www.geocities.jp/kosako3/oniguruma/
+
+    http://www.geocities.jp/kosako3/oniguruma/
 
 Then you need to do
 
@@ -43,7 +45,7 @@ The plugin adds 2 view helper methods: `code` and `syntax_css`
 
 `lang` and `line_numbers` are optional. `lang` will default to plain_text and `line_numbers` will default to true.
 
-It is *HIGHLY* recommended that you fragment_cache or some other type of caching for code fragments (TextPow and/or Ultraviolet have some speed issues).
+It is *HIGHLY* recommended that you fragment cache or some other type of caching for code fragments because `ultraviolet` is fairly slow.
 
 Theme can be an array, and one will be chosen at random.
 
