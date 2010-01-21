@@ -1,5 +1,3 @@
-puts "Base file required"
-
 module TmSyntaxHighlighting
   module Helper
     def code(code, options = {})
