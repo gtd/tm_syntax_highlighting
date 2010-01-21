@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{tm_syntax_highlighting}
-  s.version = "1.0.1"
+  s.version = "1.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Arya Asemanfar", "Gabe da Silveira"]
@@ -22,6 +22,8 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "install.rb",
+     "lib/generators/USAGE",
+     "lib/generators/syntax_css_generator.rb",
      "lib/tm_syntax_highlighting.rb",
      "lib/tm_syntax_highlighting/base.rb",
      "test/tm_syntax_highlighting_test.rb",
