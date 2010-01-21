@@ -1,5 +1,11 @@
 # TmSyntaxHighlighting
 
+## Gems, Generators and Versions
+
+This plugin was originally written by Arya Asemanfar.  It was gemified by Gabe da Silveira and released as version 1.0.0 which should theoretically be compatible with the Rails version it was designed for all the way up through 2.3.x.  The init.rb mechanism was also removed since it's unnecessary for a pure plugin and has wide variation across Rails versions.
+
+The main issue with 1.0.0 in Rails 3 is that the generator API is completely rebuilt, so even though though the helpers work in Rails 3, the generators don't which is pretty crippling to the plugin.  Therefore the 1.1.x series will be released with the generator ported to Rails 3 (which will not work in Rails 2.x).
+
 ## Installation
 
 **NOTE:** You must install ultraviolet *before* installing this plugin. Follow the instructions below.
