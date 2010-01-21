@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Arya Asemanfar", "Gabe da Silveira"]
-  s.date = %q{2010-01-20}
+  s.date = %q{2010-01-21}
   s.description = %q{Uses the Ultraviolet gem to highlight any language that TextMate can highlight, and has a (Thor) generator to generate the relevant CSS files.}
   s.email = %q{gabe@websaviour.com}
   s.extra_rdoc_files = [
@@ -21,8 +21,6 @@ Gem::Specification.new do |s|
      "README.md",
      "Rakefile",
      "VERSION",
-     "generators/syntax_css/syntax_css_generator.rb",
-     "generators/syntax_css/templates/.gitignore",
      "install.rb",
      "lib/tm_syntax_highlighting.rb",
      "lib/tm_syntax_highlighting/base.rb",
