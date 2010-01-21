@@ -13,11 +13,12 @@ Gem::Specification.new do |s|
   s.description = %q{Uses the Ultraviolet gem to highlight any language that TextMate can highlight, and has a (Thor) generator to generate the relevant CSS files.}
   s.email = %q{gabe@websaviour.com}
   s.extra_rdoc_files = [
-    "README"
+    "README.md"
   ]
   s.files = [
-    "MIT-LICENSE",
-     "README",
+    ".gitignore",
+     "MIT-LICENSE",
+     "README.md",
      "Rakefile",
      "VERSION",
      "generators/syntax_css/syntax_css_generator.rb",
@@ -26,6 +27,7 @@ Gem::Specification.new do |s|
      "lib/tm_syntax_highlighting.rb",
      "lib/tm_syntax_highlighting/base.rb",
      "test/tm_syntax_highlighting_test.rb",
+     "tm_syntax_highlighting.gemspec",
      "uninstall.rb"
   ]
   s.homepage = %q{http://github.com/dasil003/tm_syntax_highlighting}
