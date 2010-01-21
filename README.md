@@ -2,9 +2,9 @@
 
 ## Gems, Generators and Versions
 
-This plugin was originally written by Arya Asemanfar.  It was gemified by Gabe da Silveira and released as version 1.0.0 which should theoretically be compatible with the Rails version it was designed for all the way up through 2.3.x.  The init.rb mechanism was also removed since it's unnecessary for a pure plugin and has wide variation across Rails versions.
+This plugin was originally written by Arya Asemanfar.  It was gemified by Gabe da Silveira and released as version 1.0.x which should be compatible with the Rails version 2.x at least.  The init.rb mechanism was also removed since it's unnecessary for a pure plugin and has wide variation across Rails versions.
 
-The main issue with 1.0.0 in Rails 3 is that the generator API is completely rebuilt, so even though though the helpers work in Rails 3, the generators don't which is pretty crippling to the plugin.  Therefore the 1.1.x series will be released with the generator ported to Rails 3 (which will not work in Rails 2.x).
+The main issue with 1.0.x in Rails 3 is that the generator API is completely rebuilt, so even though though the helpers work in Rails 3, the generators don't which is pretty crippling to the plugin.  Therefore the 1.1.x series will be released with the generator ported to Rails 3 (which will not work in Rails 2.x).
 
 ## Installation
 
@@ -29,6 +29,15 @@ which should install `ultraviolet` and `textpow`, provided `oniguruma` is proper
 In order for this plugin to properly copy the syntax CSS files from ultraviolet, ultraviolet must already be installed. In other words, you need to install ultraviolet before installing this plugin.
 
 ## CSS Generators
+
+### Rails 3 Generator (gem v1.1.x)
+
+Currently the Rails 3 generator just generates all the syntax files.  Rails 3 generators are quite powerful, but complex, so I haven't had a chance to figure out how to add any options yet.  Shouldn't be hard to just delete the ones you don't want though.
+
+    # generate all the ultraviolet css theme files in public/stylesheets/syntax/*
+    $ script/generate syntax_css
+
+### Rails 2 Generator (gem v1.0.x)
 
 The plugin comes with a generator for the stylesheets for the different themes.
 
