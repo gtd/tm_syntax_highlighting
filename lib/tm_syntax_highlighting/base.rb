@@ -45,7 +45,7 @@ module TmSyntaxHighlighting
 
   class Config
     @@attributes = [:theme, :lang, :line_numbers, :current_themes]
-    cattr_accessor @@attributes
+    cattr_accessor *@@attributes
 
     self.line_numbers = true
     class << self
