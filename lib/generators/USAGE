@@ -2,7 +2,7 @@ Description:
     Generates the TextMate theme CSS files from Ultraviolet
 
 Example:
-    ./script/generate syntax_css
+    rails generate syntax_css
 
     This will create the files at:
         public/stylesheets/syntax/*
