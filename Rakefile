@@ -24,14 +24,14 @@ end
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
-    gemspec.name = "tm_syntax_highlighting"
-    gemspec.summary = "Gem plugin for Rails 3 to highlight code"
-    gemspec.description = "Uses the Ultraviolet gem to highlight any language that TextMate can highlight, and has a (Thor) generator to generate the relevant CSS files."
+    gemspec.name = "dasil003-tm_syntax_highlighting"
+    gemspec.summary = "Ruby 1.9.2 / Rails 3 plugin to highlight code"
+    gemspec.description = "Uses the spox-ultraviolet gem to highlight any language that TextMate can highlight, and has a (Thor) generator to generate the relevant CSS files."
     gemspec.email = "gabe@websaviour.com"
     gemspec.homepage = "http://github.com/dasil003/tm_syntax_highlighting"
     gemspec.authors = ["Arya Asemanfar", "Gabe da Silveira"]
 
-    gemspec.add_dependency('ultraviolet')
+    gemspec.add_dependency('spox-ultraviolet')
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
