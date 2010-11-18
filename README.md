@@ -1,58 +1,43 @@
 # TmSyntaxHighlighting
 
+
+
 ## Gems, Generators and Versions
 
-This plugin was originally written by Arya Asemanfar.  It was gemified by Gabe da Silveira and released as version 1.0.x which should be compatible with the Rails version 2.x at least.  The init.rb mechanism was also removed since it's unnecessary for a pure plugin and has wide variation across Rails versions.
+TextMate theme based highlighting for Ruby 1.9.2 and Rails 3.
 
-The main issue with 1.0.x in Rails 3 is that the generator API is completely rebuilt, so even though though the helpers work in Rails 3, the generators don't which is pretty crippling to the plugin.  Therefore the 1.1.x series will be released with the generator ported to Rails 3 (which will not work in Rails 2.x).
+This plugin was originally written by Arya Asemanfar.  Rails 3 generator and 1.9.2 compatibility by Gabe da Silveira.
+
+I namespaced it as dasil003-tm_syntax_highlighting to avoid interference with the original. **This version is incompatible
+with Ruby 1.8.x**
+
+
 
 ## Installation
 
-**NOTE:** You must install ultraviolet *before* installing this plugin. Follow the instructions below.
+You may remember the setup for this plugin being complicated.  Well that was in Ruby 1.8 land.  Ruby 1.9 has oniguruma
+built-in and thus everything becomes much less painful:
 
-This plugin allows you to add TextMate themed syntax highlighting to your views.
+    $ gem install dasil003-tm_syntax_highlighting
 
-It requires the `Ultraviolet` gem, which requires `TextPow`, which requires `oniguruma` (both the gem and the system library).
+which will also install `spox-ultraviolet`, the covertly 1.9 compatible version of ultraviolet.
 
-`Oniguruma` is a regular expression library used by `TextPow` in order to properly parse TextMate syntax/language files.
 
-It's relatively easy to install, here is the URL for the library:
 
-    http://www.geocities.jp/kosako3/oniguruma/
+## CSS Generator
 
-Then you need to do
-
-    $ gem install ultraviolet
-
-which should install `ultraviolet` and `textpow`, provided `oniguruma` is properly installed.
-
-In order for this plugin to properly copy the syntax CSS files from ultraviolet, ultraviolet must already be installed. In other words, you need to install ultraviolet before installing this plugin.
-
-## CSS Generators
-
-### Rails 3 Generator (gem v1.1.x)
-
-Currently the Rails 3 generator just generates all the syntax files.  Rails 3 generators are quite powerful, but complex, so I haven't had a chance to figure out how to add any options yet.  Shouldn't be hard to just delete the ones you don't want though.
+It just copies all the syntax files from ultraviolet into your stylesheets directory.  I haven't had time to figure out
+the Thor setup in Rails 3, so sue me.
 
     # generate all the ultraviolet css theme files in public/stylesheets/syntax/*
-    $ script/generate syntax_css
+    $ rails generate syntax_css
 
-### Rails 2 Generator (gem v1.0.x)
 
-The plugin comes with a generator for the stylesheets for the different themes.
-
-    # to see a list of themes
-    $ script/generate syntax_css list
-
-    # to copy all the themes to public/stylesheets/syntax
-    $ script/generate syntax_css all
-
-    # to copy a single theme to public/stylesheets/syntax
-    $ script/generate syntax_css theme_name
 
 ## Examples
 
 The plugin adds 2 view helper methods: `code` and `syntax_css`
+
 
 ### code (helper method) usage
 
