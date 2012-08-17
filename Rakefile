@@ -28,7 +28,7 @@ begin
     gemspec.summary = "Ruby 1.9.2 / Rails 3 plugin to highlight code"
     gemspec.description = "Uses the spox-ultraviolet gem to highlight any language that TextMate can highlight, and has a (Thor) generator to generate the relevant CSS files."
     gemspec.email = "gabe@websaviour.com"
-    gemspec.homepage = "http://github.com/dasil003/tm_syntax_highlighting"
+    gemspec.homepage = "http://github.com/gtd/tm_syntax_highlighting"
     gemspec.authors = ["Arya Asemanfar", "Gabe da Silveira"]
 
     gemspec.add_dependency('spox-ultraviolet')

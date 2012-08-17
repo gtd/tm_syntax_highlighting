@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
      "tm_syntax_highlighting.gemspec",
      "uninstall.rb"
   ]
-  s.homepage = %q{http://github.com/dasil003/tm_syntax_highlighting}
+  s.homepage = %q{http://github.com/gtd/tm_syntax_highlighting}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
