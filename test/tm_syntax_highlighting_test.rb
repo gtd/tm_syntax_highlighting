@@ -13,7 +13,7 @@ class TmSyntaxHighlightingTest < Test::Unit::TestCase
 
   def test_code_helper
     @view = ActionView::Base.new
-    html = @view.code("def ruby_method(param)\n  return :foo\nend", :lang => 'ruby')
+    html = @view.code("def ruby_method(param)\n  return :foo\nend", :lang => 'source.ruby')
     assert_match /span class="line-numbers"/, html, "no line number span found"
     assert_match /span class="Keyword"/, html, "no keyword span found"
     assert_match /span class="FunctionName"/, html, "no function name span found"

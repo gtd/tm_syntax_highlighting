@@ -3,7 +3,7 @@ module TmSyntaxHighlighting
     def code(code, options = {})
       options = TmSyntaxHighlighting.defaults.merge_with(options)
       TmSyntaxHighlighting.defaults[:current_themes] << options[:theme]
-      options[:lang] = "plain_text" unless Uv.syntaxes.include?(options[:lang])
+      options[:lang] = "text.plain" unless Uv.syntaxes.include?(options[:lang])
       Uv.parse(code, "xhtml", options[:lang], options[:line_numbers], options[:theme])
     end
 

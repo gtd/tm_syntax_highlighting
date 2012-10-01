@@ -31,7 +31,7 @@ begin
     gemspec.homepage = "http://github.com/gtd/tm_syntax_highlighting"
     gemspec.authors = ["Arya Asemanfar", "Gabe da Silveira"]
 
-    gemspec.add_dependency('spox-ultraviolet')
+    gemspec.add_dependency('ultraviolet')
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
